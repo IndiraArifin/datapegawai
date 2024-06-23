@@ -1,0 +1,204 @@
+@import "bootstrap/dist/css/bootstrap.min.css";
+
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+:root {
+    --primary-color: #f2f7ff;
+    --secondary-color: #4870c0;
+    --color-text: #231942;
+    --navbar-color: #f2f7ff;
+    --navbar-color-text: #000000;
+}
+
+.main {
+    background-color: var(--primary-color);
+}
+
+.navbar a {
+    background-color: var(--navbar-color);
+    font-weight: bold;
+    color: #4870c0;
+}
+.jumbotron {
+    position: relative;
+    height: 100vh;
+    background-size: 90% 100%;
+    background-position: center;
+    background-image: url("/public/img/login.png");
+}
+.card-container {
+    position: absolute;
+    width: 100%;
+    max-width: 450px;
+    top: 39%;
+    left: 73%;
+    transform: translate(-50%, -50%);
+}
+
+.card-header {
+    background-color: var(--secondary-color);
+    color: #fff;
+}
+
+.btn {
+    background-color: var(--secondary-color);
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #708abc;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-item:hover {
+    background-color: #f1f1f1;
+}
+
+.navbar {
+    padding: 15px 0 15px 0;
+    width: 100%;
+    background-color: var(--navbar-color);
+    text-align: center;
+    z-index: 9999;
+    transition: all 0.2s ease;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar .container {
+    border-radius: 10px;
+    background-color: var(--primary-color);
+    padding: 1px 10px;
+}
+
+aside {
+    height: 100vh;
+}
+.invalid-feedback{
+    display: block;
+    font-weight: bold;
+}
+#spinner{
+    display: none;
+}
+
+.employee-card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+.employee-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+.card-body-icon {
+    text-align: center;
+    font-size: 50px;
+    opacity: 0.4;
+    padding: 20px 0 0 0;
+}
+
+.table-responsive {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+}
+
+@media (max-width: 576px) {
+    .card-container {
+        max-width: 300px;
+        #employeeTable th,
+        #employeeTable td {
+            font-size: 0.5em;
+        }
+        .btn-sm {
+            padding: 0.2rem 0.4rem;
+            font-size: 0.6rem;
+        }
+        .btn-sm i {
+            font-size: 0.6rem;
+        }
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 768px) {
+    .card-container {
+        max-width: 370px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .jumbotron {
+        background-image: none !important;
+    }
+    .card-header {
+        text-align: center;
+        font-weight: bold;
+    }
+    .navbar a {
+        justify-content: center;
+    }
+    .table-responsive {
+        overflow-x: auto;
+    }
+    #employeeTable th,
+    #employeeTable td {
+        font-size: 0.7em;
+    }
+    .btn-sm {
+        padding: 0.25rem 0.5rem;
+        font-size: 0.7rem;
+    }
+    .btn-sm i {
+        font-size: 0.5rem;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (max-width: 992px) {
+    .card-container {
+        max-width: 370px;
+    }
+    #navbarDropdown {
+        justify-content: center;
+    }
+    #employeeTable th,
+    #employeeTable td {
+        font-size: 0.85em;
+    }
+    .btn-sm {
+        padding: 0.3rem 0.6rem;
+        font-size: 0.75rem;
+    }
+    .btn-sm i {
+        font-size: 0.75rem;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (max-width: 1200px) {
+    .card-container {
+        max-width: 370px;
+    }
+}
