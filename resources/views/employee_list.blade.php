@@ -12,6 +12,7 @@
                 <th>Name</th>
                 <th>Position</th>
                 <th>Email</th>
+                <th>No Telp</th>
                 <th>Actions</th>
             </tr>
         </thead>
@@ -21,6 +22,7 @@
             <td><a href="{{ route('employees.show', $employee->id) }}" style="text-decoration: none;">{{ $employee->name }}</a></td>
                 <td>{{ $employee->position }}</td>
                 <td>{{ $employee->email }}</td>
+                <td>{{ $employee->no_telp }}</td>
                 <td>
                     <a href="{{ route('employees.edit', $employee->id) }}" class="btn btn-sm btn-primary">
                         <i class="fas fa-edit"></i>

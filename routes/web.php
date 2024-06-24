@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EmployeeController;
 use Illuminate\Support\Facades\Auth;
-
+use App\Http\Controllers\DashboardController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -21,7 +21,7 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
+Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
 
 Route::resource('employees', EmployeeController::class);

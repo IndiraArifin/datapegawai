@@ -24,6 +24,7 @@ class EmployeeController extends Controller
             'name' => 'required|max:255',
             'position' => 'nullable|max:255',
             'email' => 'required|email|unique:employees,email',
+            'no_telp' => 'nullable|numeric',
         ]);
     
         Employee::create($validatedData);
@@ -50,6 +51,7 @@ public function update(Request $request, $id)
         'name' => 'required|max:255',
         'position' => 'nullable|max:255',
         'email' => 'required|email|unique:employees,email,' . $id, 
+        'no_telp' => 'nullable|numeric',
     ]);
 
     $employee->update($validatedData);

@@ -14,6 +14,7 @@
                     <h5 class="card-title">{{ $employee->name }}</h5>
                     <p class="card-text"><strong>Position:</strong> {{ $employee->position }}</p>
                     <p class="card-text"><strong>Email:</strong> {{ $employee->email }}</p>
+                    <p class="card-text"><strong>No Telp:</strong> {{ $employee->no_telp }}</p>
                 </div>
             </div>
         </div>

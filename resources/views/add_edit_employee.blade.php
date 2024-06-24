@@ -20,6 +20,11 @@
             <label for="email" class="form-label">Email</label>
             <input type="email" class="form-control" id="email" name="email" required value="{{ $employee->email ?? '' }}">
         </div>
+        <div class="mb-3">
+            <label for="no_telp" class="form-label">No Telp</label>
+            <input type="no_telp" class="form-control" id="no_telp" name="no_telp" value="{{ $employee->no_telp ?? '' }}">
+        </div>
+
         <button type="submit" class="btn btn-primary">{{ isset($employee) ? 'Update' : 'Submit' }}</button>
     </form>
 </div>

@@ -18,6 +18,7 @@ class CreateEmployeesTable extends Migration
             $table->string('name');
             $table->string('position')->nullable();
             $table->string('email')->unique();
+            $table->string('no_telp')->nullable();
             $table->timestamps();
         });
     }

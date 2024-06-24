@@ -46,11 +46,11 @@
                             </button>
                         </div>
                     </div>
-                    <div class="row mb-0">
+                    <!-- <div class="row mb-0">
                         <div class="col-md-8 offset-md-4">                            
-                            <p>Register? <a href="{{ route('register') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a></p>
+                            <p>Register? <a href="{{ route('register') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Di sini</a></p>
                         </div>
-                    </div>
+                    </div> -->
 
                     <script>
                     document.addEventListener('DOMContentLoaded', function () {
